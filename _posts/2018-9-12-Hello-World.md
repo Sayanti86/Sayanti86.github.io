@@ -1,5 +1,6 @@
 ---
 layout: post
+
 title: Data - The astrologer.
 ---
 
@@ -12,4 +13,6 @@ The huge historical data of last one year or six months depending upon when the 
 For testing the accuracy, the system will be given all historical information for all those accounts which has been closed already to understand if it is able to predict accurately. Once the system stability has been established then the bank will try to develop offers specifically for account holders depending upon their usage of the account. Like if accounts has been used mostly for shopping or paying utility bills or transferring money to family members. Then offers will be generated wither with special discount rates for shopping or adding points for paying utility bills or even having family members account in the same bank giving cashback facility. All these offers will have specific target groups depending upon their account transactions or usage. 
 
 This way by data driven analysis bank can market their new products and increase customer base also predict customer churning and take actions to stop that which will eventually help them increase their profitability.
+
+
 

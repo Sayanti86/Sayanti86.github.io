@@ -98,5 +98,3 @@ This is how Natural Language Processing will make the future of AI-Human interac
 [The Dependency Parsing Problem](https://www.youtube.com/watch?v=o7WlsBW-ndg)
 
 
-
-
