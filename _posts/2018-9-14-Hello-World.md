@@ -17,13 +17,13 @@ So truly said (read sang) . There are thousands of words used by every human bei
 Text is one of the most unstructured form of input . So the first task is to clean the text and make it structured for the algorithm .
 The process is called Text Processing. 
  
-
+```
 High level flow for text processing:
 
 Raw text ---> Stopwords, URL ---> Lemmatisation, Stemming ---> Cleaned Text
              (Noise Removal)     (Lexicon Normalisation)               
 
-
+```
 <ins>**Noise Removal**</ins> : To remove words which does not impact the context , like I, am , is , the , of  etc. 
                                Known as Stopwords. Also to remove URLs or links . 
                                
@@ -96,5 +96,7 @@ This is how Natural Language Processing will make the future of AI-Human interac
 [Research Article](https://www.hindawi.com/journals/cmmm/2016/8708434/)
 
 [The Dependency Parsing Problem](https://www.youtube.com/watch?v=o7WlsBW-ndg)
+
+
 
 

@@ -13,4 +13,3 @@ For testing the accuracy, the system will be given all historical information fo
 
 This way by data driven analysis bank can market their new products and increase customer base also predict customer churning and take actions to stop that which will eventually help them increase their profitability.
 
-
