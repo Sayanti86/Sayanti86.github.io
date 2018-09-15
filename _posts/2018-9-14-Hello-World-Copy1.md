@@ -3,9 +3,9 @@ layout: post
 title: Natural Language Processing.
 ---
 
-Have you ever thought how Gmail decides which mails of yours should go to your Primary inbox , which ones to Social inbox  and what goes in Promotions inbox ? It is like someone sorting your emails on your behalf by checking the content of it . This key feature of "Email Classification" is achieved by Natural Language Processing . It is an area in AI which is concerned with the interactions between computers and human languages and the ability of machines to understand, analyze and derive information from  natural human language . Sounds surprising !? Then you would love to know that you use NLP in your everyday life more often than you can imagine. Remember the auto completion of statements when you type in your smart phone , or the predictive typing which suggests the next word when you are typing in your search engine! That’s Natural Language Processing in action . 
+Have you ever thought how Gmail decides which mails of yours should go to your Primary inbox , which ones to Social inbox  and what goes in Promotions inbox ? It is like someone sorting your emails on your behalf by checking the content of it . This key feature of "Email Classification" is achieved by Natural Language Processing . It is an area in AI which is concerned with the interactions between computers and human languages and the ability of machines to understand, analyze and derive information from  natural human language . Sounds surprising !? Then you would love to know that you use NLP in your everyday life more often than you can imagine. Remember the auto completion of statements when you type in your smart phone , or the predictive typing which suggests the next word when you are typing in your search engine! That’s Natural Language Processing working for you. 
 
-This is what makes NLP so much important and robust . It is used for simple purposes which we have taken for granted for many years and also for much complex usage like Google assistant , ALEXA , Siri.
+This is what makes NLP so much important and robust . It is used for simple purposes and also for much complex usage like Google assistant , ALEXA , Siri.
 
 ### What is Natural Language Processing in natural words ?
 _“It’s only words and words are all I have to take your heart away “ – Ronan Keating._
@@ -82,7 +82,7 @@ Explanation : Understanding the topic will help understand what other elements u
 
 In nutshell , the above process of semantic analysis, breaks down the human language for computers to understand and analyze to form meaningful insights. NLP is not an easy subject to understand , it is very vast and has lot of layers to it . As NLP develops we will see more interactions between AI and human life . It gives me immense hope that NLP is capable of predicting much deeper issues like psychiatric symptoms . It can detect depression by analyzing speech , usage of words, phrases and send alert (real SMS, yes it can !) for helping the patient . Also research and experiments are in progress to predict suicidal ideation in text based mental health intervention . 
 
-This is how Natural Language Processing will make the future of AI-Human interaction more powerful and useful.
+
 
 
 *References :*
