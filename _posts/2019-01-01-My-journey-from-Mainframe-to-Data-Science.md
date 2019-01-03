@@ -1,9 +1,7 @@
 
----
-layout: post
 
-title: My journey from Mainframe to Data Science.
----
+
+My journey from Mainframe to Data Science.
 
 Prologue 
 I am a data scientist in making with 9+ years of work experience in software industry . 
