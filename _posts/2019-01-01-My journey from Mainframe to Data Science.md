@@ -1,6 +1,5 @@
 
 ---
-layout: post
 
 title: My journey from Mainframe to Data Science.
 ---
