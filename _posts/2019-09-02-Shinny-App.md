@@ -56,12 +56,12 @@ __'Filter rationale'__
 All tabs except for ‘Usage’ , has provision of filtering the data . The three filters which could be used are ‘Age’, ‘Gender’ , ‘Country’.
 
 
+#### Notes : 
 
+* The application [app](https://marcelle-sayanti.shinyapps.io/mental_health_issue_tracker/)   
+* The R code : [Script](https://github.com/UBC-MDS/Mental_Health_Issue_Tracker/blob/master/src_shiny/app.R)    
+* The GitHub repo [Repo](https://github.com/UBC-MDS/Mental_Health_Issue_Tracker)     
 
-*The application [app](https://marcelle-sayanti.shinyapps.io/mental_health_issue_tracker/)   
-*The R code : [Script](https://github.com/UBC-MDS/Mental_Health_Issue_Tracker/blob/master/src_shiny/app.R)    
-*The GitHub repo [Repo](https://github.com/UBC-MDS/Mental_Health_Issue_Tracker)     
-
-*This app is designed by Sayanti Ghosh , Marcelle Chiriboga as part of MDS course project.   
+* This app is designed by Sayanti Ghosh , Marcelle Chiriboga as part of MDS course project.   
 
 
