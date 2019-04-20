@@ -5,12 +5,7 @@ title: Natural Language Processing.
 
 Have you ever thought how Gmail decides which mails of yours should go to your Primary inbox , which ones to Social inbox  and what goes in Promotions inbox ? It is like someone sorting your emails on your behalf by checking the content of it . This key feature of "Email Classification" is achieved by Natural Language Processing . It is an area in AI which is concerned with the interactions between computers and human languages and the ability of machines to understand, analyze and derive information from  natural human language . Sounds surprising !? Then you would love to know that you use NLP in your everyday life more often than you can imagine. Remember the auto completion of statements when you type in your smart phone , or the predictive typing which suggests the next word when you are typing in your search engine! That’s Natural Language Processing working for you. 
 
-This is what makes NLP so much important and robust . It is used for simple purposes and also for much complex usage like Google assistant , ALEXA , Siri.
-
-### What is Natural Language Processing in natural words ?
-_“It’s only words and words are all I have to take your heart away “ – Ronan Keating._
-
-So truly said (read sang) . There are thousands of words used by every human being every day . These words are interpreted and actions are taken on them . Though we all know words spoken are not always meant , they have inner meanings as well. However , it is not always the words which are used to communicate , humans use body language , tone too to understand the context. Similarly , NLP works with contextual patterns but not intonations. It figures out the pattern from repeatedly used words to form an insight. It also understands human speech and simulate answers in natural language. Best example is Google Assistant booking appointments. In business world , it is used to find which words customers use while searching a product . Then it derives a pattern and understands the need of the customer which helps the business to offer products or deals via advertisements to target groups. 
+This is what makes NLP so much important and robust . It is used for simple purposes and also for much complex usage like Google assistant , ALEXA , Siri.   
 
 ### How does Natural Language Processing works ? – The Data Scientist’s view.
 
@@ -60,6 +55,62 @@ Example : Text -- I love dancing , so I danced in rain.
           
 Explanation : The frequency of using same words helps to understand the importance of the context .
 ```         
+#### Example : Text preprocessing code snippet :    
+
+```
+import spacy
+# Load English model for SpaCy
+nlp = spacy.load("en_core_web_sm")
+
+def preprocess(text, 
+               min_token_len = 2 , 
+               irrelevant_pos = ['ADV','PRON','CCONJ','PUNCT','PART','DET','ADP','SPACE']): 
+    """
+    Given text, min_token_len, and irrelevant_pos carry out preprocessing of the text 
+    and return a preprocessed string. 
+    
+    Keyword arguments:
+    text -- (str) the text to be preprocessed
+    min_token_len -- (int) min_token_length required
+    irrelevant_pos -- (list) a list of irrelevant pos tags
+    
+    Returns: (str) the preprocessed text
+    """
+    # Cleaning text and making it lower case
+    text = re.sub(r'\S*@\S*\s?', '', text)
+    text = text.replace('In article (', '')
+    text = text.replace(') says:', '')
+    text = text.lower()
+    
+    # Replace multiple spaces with a single space. 
+    text = re.sub("\s\s+", " ", text)
+    
+    #3. Remove numbers : 
+    text=re.sub('[0-9]+', '', text)
+
+    doc = nlp(text) 
+    
+    #Removing stop words , punctuation and irrelevant part of speech and getting lemmatized.
+    tokens=[]
+    token_len=[]
+    lemma=[]
+    for token in doc: 
+        if not token.is_stop | token.is_punct | token.is_space:
+            if (token.pos_ not in irrelevant_pos): 
+                lemma.append(token.lemma_)
+    for i in lemma:
+        if len(i) > min_token_len:
+            token_len.append(i)       
+    return token_len
+    
+df['clean_text'] = df['text'][0:6].apply(preprocess)
+df.head()
+```
+* Result : 
+
+![data](/images/NLP/img1.PNG)
+
+
 <ins>**Entity as Features**</ins> : To understand the noun phrases , verb phrases. 
                                     This is rule based model , where algorithms are used to understand consumer insights,
                                     or used in chatbots.
@@ -79,6 +130,73 @@ Example : Words like “medicine”, “doctor” refers to Healthcare .
 Explanation : Understanding the topic will help understand what other elements under 
               this topic might be needed and accordingly suggestions can be proposed.
 ```
+
+#### Example of Topic Modeling : 
+
+Using LDA model :   
+Created a dictionary using gensim's corpora.Dictionary method.  
+Created the document-term co-occurrence matrix using corpora.Dictionary's doc2bow method.
+
+```
+corpus = [doc.split() for doc in df['clean_text'].tolist()]
+
+dictionary = corpora.Dictionary(corpus)
+doc_term_matrix = [dictionary.doc2bow(doc) for doc in corpus]
+
+lda = models.LdaModel(corpus=doc_term_matrix, 
+                      id2word=dictionary, 
+                      num_topics=6, 
+                      passes=8)
+
+#Building the dictionary with topic label :
+topic_map={0:"Travel",
+           1:"Issue",
+            2:"Electronics",
+            3:"Politics-War",
+            4:"Entertainment",
+            5:"Service feedback"}
+            
+```
+
+Getting the topics of a test data :   
+
+```
+def get_topic_label_prob(unseen_document, model = lda, dct=dictionary):
+    """
+    Given an unseen_document, and a trained LDA model, this function
+    assigns a topic and returns a string containig your manually assigned 
+    label of the best topic and its probability. 
+    
+    Keyword arguments:
+    unseen_document -- (str) the document to be labeled with a topic
+    model -- (gensim ldamodel) the trained LDA model
+    
+    Returns: (ste) a string of the form your manually assigned 
+    label of the topic:probability of the topic.
+    
+    """
+    final=[]
+
+    clean_text=preprocess(unseen_document).split()
+    bow_vector = [dct.doc2bow(i) for i in [clean_text]]
+    
+    for i in lda[bow_vector]: 
+        topic_assign = sorted(i,key=lambda x:x[1],reverse=True)
+        for key, value in topic_map.items():
+            if str(topic_assign[0][0]) == str(key):
+                final.append("".join([value,":",str(topic_assign[0][1])]))
+    return final
+
+test_df['topic'] =test_df['text'].apply(get_topic_label_prob)
+
+#Taking a random sample set
+test_df[10:31]   
+```
+* Result : 
+
+![data](/images/NLP/img2.PNG)   
+*Few of them match perfectly and makes so much sense, but few of them do not match very well. However, they give a broader sense of the topic.
+
 
 In nutshell , the above process of semantic analysis, breaks down the human language for computers to understand and analyze to form meaningful insights. NLP is not an easy subject to understand , it is very vast and has lot of layers to it . As NLP develops we will see more interactions between AI and human life . It gives me immense hope that NLP is capable of predicting much deeper issues like psychiatric symptoms . It can detect depression by analyzing speech , usage of words, phrases and send alert (real SMS, yes it can !) for helping the patient . Also research and experiments are in progress to predict suicidal ideation in text based mental health intervention . 
 
