@@ -10,7 +10,7 @@ Having 9 years of experience in Information Technology. Which includes 2.5 years
 * Acted as IT owner of critical applications of bank.
 * Lead a team of 8 for award winning project of Credit Suisse.  
 
-I enjoy teaching and believe that you can learn more when teach someone. 
+I enjoy teaching and believe that you can learn more when you teach someone. 
 
 
 ### More Information
