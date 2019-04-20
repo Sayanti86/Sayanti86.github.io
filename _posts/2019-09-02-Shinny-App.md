@@ -52,7 +52,8 @@ To see the raw data which contains the survey responses for detail analysis.
 
 ![img](/images/Shn/img4.PNG)
 
-__'Filter rationale'__  
+* 'Filter rationale'    
+
 All tabs except for ‘Usage’ , has provision of filtering the data . The three filters which could be used are ‘Age’, ‘Gender’ , ‘Country’.
 
 
