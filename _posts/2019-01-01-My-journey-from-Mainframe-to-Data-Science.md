@@ -1,5 +1,5 @@
 
-I am a data scientist in making with 9+ years of work experience in software industry . 
+I am a data scientist in making with 9 years of work experience in software industry . 
 I chose to shift my career at its peak in my full senses , by choice and not by accident.
 Though many of my well-wishers says , I have taken huge risk but I correct them stating , I have taken calculated risk .
 
