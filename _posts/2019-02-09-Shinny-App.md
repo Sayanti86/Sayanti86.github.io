@@ -3,9 +3,6 @@ layout: post
 
 title: Mental Health Issue Tracker for Tech Company.
 ---
-
-#### Motivation :    
-
 Mental Health issue is a global challenge affecting people of every age, background and profession. According to Statistics Canada, mental illnesses cost Canadian employers billions of dollars in absenteeism or sick days, “presenteeism” (coming to work, even when the employee can’t work well), disability and other benefits, and lost productivity. Many times, employees who are already suffering from the issue do not reach out for help because either they are not comfortable with the benefit plan or they are not aware about it, which eventually affects their performance. If employers could get the information of how many employees are dealing with the issue, are actually reaching out for help, how much they are aware about the policies, and what is the intensity of work interference their health has, then it might be possible for the employer to enhance/add policies to spread more awareness and help employees. To address this situation, we propose to build an application for the employer which will provide them the information of how many of the employees are aware about the benefits plans. Also, it will filter on variables to show ratio about mentally ill employees who need help with respect to their health history. Also, the application will enable opportunities for the employer to understand the intensity of effect the illness is causing to their performance with respect to treatment received or not.
 
 #### Data :   
