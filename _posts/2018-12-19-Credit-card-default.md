@@ -4,8 +4,6 @@ layout: post
 title: Estimating whether a credit card client will default or not.
 ---
 
-#### Introduction   
-
 Prior to become a Data Scientist, I was working as Software Engineer in a Fortune 500 company. Most of my experience there was working for clients in banking and financial services. What I did mostly for them is to build and maintain mainframe applications. Though they had different rules, different policies but I always noticed all of them had one common issue . That is, whether  their credit card client will pay the bill on time or not. This question intrigued me lot, so I tried to find if it is possible to estimate whether a credit card client will default or not. 
 
 #### Data
