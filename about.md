@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi , I am a Data Scientist and a story teller.  
+Hi , I am a Data Scientist and a storyteller.  
 Having 9 years of experience in Information Technology. Which includes 2.5 years of onsite experience for a swiss bank as onsite lead .
 * I have worked in BFS , Retail and Insurance domain.
 * Acted as IT owner of critical applications of bank.
